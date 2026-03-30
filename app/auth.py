@@ -1,12 +1,16 @@
 import sqlite3
+import os
 from passlib.context import CryptContext
-
 
 pwd_context = CryptContext(schemes=["bcrypt_sha256"], deprecated="auto")
 
+DB_PATH = "database/users.db"
+
+
+os.makedirs("database", exist_ok=True)
 
 def create_user(username, password):
-    conn = sqlite3.connect("database/users.db")
+    conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
 
     cur.execute("""
@@ -24,20 +28,16 @@ def create_user(username, password):
         return True
     except:
         return False
-    finally:
-        conn.close()
 
 
 def login(username, password):
-    conn = sqlite3.connect("database/users.db")
+    conn = sqlite3.connect(DB_PATH)
     cur = conn.cursor()
 
-    cur.execute("SELECT password FROM users WHERE username=?", (username,))
-    data = cur.fetchone()
+    cur.execute("SELECT password FROM users WHERE username = ?", (username,))
+    result = cur.fetchone()
 
-    conn.close()
-
-    if data:
-        return pwd_context.verify(password, data[0])
+    if result and pwd_context.verify(password, result[0]):
+        return True
 
     return False
