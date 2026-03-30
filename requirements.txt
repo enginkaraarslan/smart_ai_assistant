@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-community
+langgraph
+google-generativeai
+chromadb
+faiss-cpu
+python-dotenv
+sqlalchemy
+passlib
+bcrypt==4.0.1
+sentence-transformers
+pypdf
