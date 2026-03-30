@@ -9,6 +9,7 @@
 ![LangChain](https://img.shields.io/badge/LangChain-AI-green)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Workflow-purple)
 ![Gemini](https://img.shields.io/badge/Gemini-AI-brightgreen)
+![LangSmith](https://img.shields.io/badge/LangSmith-Monitoring-blue)
 ![License](https://img.shields.io/badge/License-MIT-brightgreen)
 
 ---
@@ -66,10 +67,23 @@
 
 ### 🔄 LangGraph Workflow
 - Intelligent routing:
-  - 📚 RAG Agent
-  - 🧠 General AI Agent
-- Evaluation node for response quality
-- Conditional flows
+- 📚 RAG Agent
+- 🧠 General AI Agent
+- 🤖 Evaluation node for response quality
+- 📊 Router Node → decides flow
+
+---
+
+### 📊 LangSmith Monitoring (IMPORTANT 🚀)
+
+This project integrates **LangSmith** for:
+
+- 🔍 Tracing each LangGraph execution
+- 📈 Monitoring latency & token usage
+- 🐞 Debugging errors
+- 📊 Observing system performance
+
+👉 Helps understand **how AI decisions are made internally**
 
 ---
 
