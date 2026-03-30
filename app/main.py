@@ -6,6 +6,7 @@ import streamlit as st
 from auth import login, create_user
 from chat import handle_chat
 from services.memory import get_history
+from services.memory import save_chat  
 from utils.helpers import load_pdf
 from core.vector_store import create_vector_store
 
@@ -152,13 +153,14 @@ else:
                     st.session_state.get("vector_store")
                 )
 
-                # ✅ STORE RESPONSE (KEY FIX)
+               
+                save_chat(st.session_state.user, query, response)
+
+                
                 st.session_state.last_q = query
                 st.session_state.last_r = response
 
                 st.session_state.clear_input_flag = True
-
-             
 
 
     st.markdown(
